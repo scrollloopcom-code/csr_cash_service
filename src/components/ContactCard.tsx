@@ -11,10 +11,8 @@ import {
   MessageSquare,
   Copy,
   Check,
-  Cloud,
   Star,
 } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ProfileImage from "@/assets/dp.png";
 import BrandIcon from "@/components/BrandIcon";
 
@@ -27,7 +25,7 @@ const EMAIL = "madusharathnayaka04@gmail.com";
 const WHATSAPP_GROUP =
   "https://chat.whatsapp.com/HrmpOlLlZiwGX9LoFfMLB8?mode=ac_t";
 const WHATSAPP_CHANNEL =
-  "https://chat.whatsapp.com/HrmpOlLlZiwGX9LoFfMLB8?mode=ac_t";
+  "https://whatsapp.com/channel/0029Vb1FS5O7z4komLMMGU1a";
 const FACEBOOK = "https://www.facebook.com/PagePodda086?mibextid=ZbWKwL";
 const TELEGRAM_GROUP = "https://t.me/MaduRathnayaka";
 const PROMO_CODE = "CSR1996";
@@ -37,15 +35,6 @@ const BIO_LINES = [
   "✅ 100% විශ්වාසයි.",
   "💰 පළමු තැන්පතුවට 2% ක ක්ෂණික Cash Back දීමනාවක්!",
   "අති විශේෂ Bonus සහ Offers සඳහා දැන්ම Whatsapp හරහා සම්බන්ධ වන්න.",
-];
-
-const REVIEW_IMAGES: { src: string; alt: string }[] = [
-  { src: "/placeholder.svg", alt: "Review 1" },
-  { src: "/placeholder.svg", alt: "Review 2" },
-  { src: "/placeholder.svg", alt: "Review 3" },
-  { src: "/placeholder.svg", alt: "Review 4" },
-  { src: "/placeholder.svg", alt: "Review 5" },
-  { src: "/placeholder.svg", alt: "Review 6" },
 ];
 
 function saveVCard() {
@@ -77,26 +66,28 @@ function saveVCard() {
 
 const ReviewsButton: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div
+    <a
+      href={WHATSAPP_CHANNEL}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`
         group inline-flex items-center gap-1.5
         rounded-full
         px-3 sm:px-4 py-1.5
         text-xs sm:text-sm font-medium
-        bg-slate-800/50 text-slate-200
-        border border-slate-700
+        bg-yellow-500/20 text-yellow-300
+        border border-yellow-500/40
         shadow-lg shadow-slate-950/50
         backdrop-blur-sm
         transition
-        opacity-75
-        cursor-not-allowed
+        hover:bg-yellow-500/30 hover:border-yellow-500/60
         ${className ?? ""}
       `}
-      aria-label="Reviews (currently unavailable)"
+      aria-label="View Reviews on WhatsApp"
     >
-      <Cloud className="h-4 w-4 text-cyan-400" />
+      <Star className="h-4 w-4 text-yellow-400" />
       Reviews
-    </div>
+    </a>
   );
 };
 
@@ -120,7 +111,7 @@ const Avatar: React.FC = () => (
   </div>
 );
 
-const Header: React.FC<{ onOpenReviews: () => void }> = () => (
+const Header: React.FC = () => (
   <div className="text-center">
     <Avatar />
     <div className="mt-3">
@@ -213,13 +204,11 @@ const btnColors = {
 };
 
 const ContactCard: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
-
   return (
     <div className="w-full">
       <Card className="rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-xl shadow-2xl shadow-slate-950/60 bg-aurora">
         <CardContent className="space-y-5 sm:space-y-6 p-4 sm:p-6">
-          <Header onOpenReviews={() => {}} />
+          <Header />
 
           <div className="space-y-3">
             <div className="space-y-2.5 sm:space-y-0">
@@ -276,37 +265,6 @@ const ContactCard: React.FC = () => {
           </div>
         </CardContent>
       </Card>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-3xl border-slate-800 bg-slate-900/80 backdrop-blur-md">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 text-yellow-300">
-              <Star className="h-5 w-5" />
-              Reviews
-            </DialogTitle>
-          </DialogHeader>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-            {REVIEW_IMAGES.map((img, idx) => (
-              <div
-                key={idx}
-                className="relative overflow-hidden rounded-lg border border-slate-800 bg-slate-900/50"
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="h-28 sm:h-32 w-full object-cover transition-transform duration-300 hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="text-xs text-slate-400">
-            These are sample images. Replace with your real review screenshots anytime.
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
