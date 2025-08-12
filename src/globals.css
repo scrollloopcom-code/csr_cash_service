@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    background-color: #020617; /* slate-950 */
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: transparent;
+    overscroll-behavior: none;
+    overflow-x: hidden;
+  }
+
+  /* New background orb styles */
+  @keyframes dynamicBlob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    25% { transform: translate(40px, -60px) scale(1.1); }
+    50% { transform: translate(-30px, 30px) scale(0.9); }
+    75% { transform: translate(20px, 40px) scale(1.05); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: screen; /* Changed from multiply */
+    filter: blur(3.5rem);
+    opacity: 0.15; /* Adjusted opacity */
+    animation: dynamicBlob 15s infinite;
+  }
+
+  .orb-pink-purple {
+    background: radial-gradient(circle, #0ea5e9, #4f46e5); /* sky-500 to indigo-600 */
+    width: 22rem;
+    height: 22rem;
+    top: 20%;
+    left: -8rem;
+  }
+
+  .orb-purple {
+    background: radial-gradient(circle, #14b8a6, #0ea5e9); /* teal-500 to sky-500 */
+    width: 20rem;
+    height: 20rem;
+    top: 70%;
+    right: -7rem;
+    animation-delay: 2s;
+  }
+
+  .orb-blue-cyan {
+    background: radial-gradient(circle, #22d3ee, #0ea5e9); /* cyan-400 to sky-500 */
+    width: 25rem;
+    height: 25rem;
+    top: 40%;
+    left: 30%;
+    animation-delay: 4s;
+    animation-duration: 20s;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.5);
+  }
+
+  .bg-aurora {
+    --aurora-color-1: 199 98% 48%; /* cyan-500 */
+    --aurora-color-2: 217 91% 60%; /* blue-500 */
+    --aurora-color-3: 262 88% 58%; /* violet-500 */
+    --aurora-color-4: 166 98% 48%; /* teal-500 */
+    --aurora-color-5: 199 98% 48%; /* cyan-500 */
+    
+    background:
+      radial-gradient(100% 100% at 100% 0%, hsl(var(--aurora-color-1) / 0.15) 0%, transparent 50%),
+      radial-gradient(100% 100% at 0% 100%, hsl(var(--aurora-color-3) / 0.15) 0%, transparent 50%);
+  }
+}
