@@ -117,8 +117,7 @@ const Header: React.FC = () => (
     <div className="mt-3">
       <ReviewsButton />
     </div>
-    <h1 className="mt-4 text-xl sm:text-2xl font-bold tracking-tight text-white inline-flex items-center justify-center gap-2.5">
-      <BrandIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+    <h1 className="mt-4 text-xl sm:text-2xl font-bold tracking-tight text-white">
       <span className="text-glow">{BUSINESS}</span>
     </h1>
     <p className="mt-3 text-sm text-slate-300">
