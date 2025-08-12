@@ -23,7 +23,7 @@ const LoadingScreen: React.FC = () => {
           style={{ animationDelay: "200ms" }}
         >
           <div className="flex flex-col items-center justify-center gap-3">
-            <BrandIcon className="h-20 w-20 sm:h-24 sm:w-24" />
+            <BrandIcon className="h-40 w-40 sm:h-48 sm:w-48" />
             <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
               <span className="text-glow">CSR Cash Service</span>
             </div>
