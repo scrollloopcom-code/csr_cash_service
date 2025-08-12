@@ -226,8 +226,8 @@ const ContactCard: React.FC = () => {
               {/* Desktop layout */}
               <div className="hidden sm:grid sm:grid-cols-3 sm:gap-3">
                 <Button asChild className={`${btnBase} ${btnColors.whatsapp}`}><a href={`https://wa.me/94${PHONE_WHATSAPP.replace(/^0/, "")}`} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageCircle className="mr-2 h-4 w-4" />WhatsApp</a></Button>
-                <Button asChild className={`${btnBase} ${btnColors.call}`}><a href={`tel:${PHONE_CALL}`} className="flex items-center justify-center"><Phone className="mr-2 h-4 w-4" />Call</a></Button>
                 <Button asChild className={`${btnBase} ${btnColors.telegram}`}><a href={TELEGRAM_GROUP} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageCircle className="mr-2 h-4 w-4" />Telegram</a></Button>
+                <Button asChild className={`${btnBase} ${btnColors.call}`}><a href={`tel:${PHONE_CALL}`} className="flex items-center justify-center"><Phone className="mr-2 h-4 w-4" />Call</a></Button>
                 <Button asChild className={`${btnBase} ${btnColors.email}`}><a href={`mailto:${EMAIL}`} className="flex items-center justify-center"><Mail className="mr-2 h-4 w-4" />Email</a></Button>
                 <Button asChild className={`${btnBase} ${btnColors.group}`}><a href={WHATSAPP_GROUP} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageSquare className="mr-2 h-4 w-4" />Group</a></Button>
                 <Button asChild className={`${btnBase} ${btnColors.facebook}`}><a href={FACEBOOK} target="_blank" rel="noreferrer" className="flex items-center justify-center"><Facebook className="mr-2 h-4 w-4" />Facebook</a></Button>
@@ -240,10 +240,10 @@ const ContactCard: React.FC = () => {
               <div className="grid sm:hidden gap-2.5">
                 <div className="grid grid-cols-2 gap-2.5">
                   <Button asChild className={`${btnBase} ${btnColors.whatsapp}`}><a href={`https://wa.me/94${PHONE_WHATSAPP.replace(/^0/, "")}`} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageCircle className="mr-2 h-4 w-4" />WhatsApp</a></Button>
-                  <Button asChild className={`${btnBase} ${btnColors.call}`}><a href={`tel:${PHONE_CALL}`} className="flex items-center justify-center"><Phone className="mr-2 h-4 w-4" />Call</a></Button>
+                  <Button asChild className={`${btnBase} ${btnColors.telegram}`}><a href={TELEGRAM_GROUP} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageCircle className="mr-2 h-4 w-4" />Telegram</a></Button>
                 </div>
                 <div className="grid grid-cols-2 gap-2.5">
-                  <Button asChild className={`${btnBase} ${btnColors.telegram}`}><a href={TELEGRAM_GROUP} target="_blank" rel="noreferrer" className="flex items-center justify-center"><MessageCircle className="mr-2 h-4 w-4" />Telegram</a></Button>
+                  <Button asChild className={`${btnBase} ${btnColors.call}`}><a href={`tel:${PHONE_CALL}`} className="flex items-center justify-center"><Phone className="mr-2 h-4 w-4" />Call</a></Button>
                   <Button asChild className={`${btnBase} ${btnColors.email}`}><a href={`mailto:${EMAIL}`} className="flex items-center justify-center"><Mail className="mr-2 h-4 w-4" />Email</a></Button>
                 </div>
                 <div className="grid grid-cols-2 gap-2.5">
