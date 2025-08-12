@@ -25,7 +25,7 @@ const LoadingScreen: React.FC = () => {
           <div className="flex flex-col items-center justify-center gap-3">
             <BrandIcon className="h-16 w-16 sm:h-20 sm:w-20" />
             <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
-              <span className="text-glow">CSR CASH SERVICE</span>
+              <span className="text-glow">CSR Cash Service</span>
             </div>
           </div>
           <p className="mt-2 text-xs text-white/60">By Madusha Lakshani</p>

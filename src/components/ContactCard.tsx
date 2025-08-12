@@ -18,7 +18,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import ProfileImage from "@/assets/dp.png";
 import BrandIcon from "@/components/BrandIcon";
 
-const BUSINESS = "CSR CASH SERVICE";
+const BUSINESS = "CSR Cash Service";
 const FULL_NAME = "Madusha Lakshani";
 const DISPLAY_NAME = "Madusha Lakshani";
 const PHONE_WHATSAPP = "0775651669";
@@ -262,7 +262,7 @@ const ContactCard: React.FC = () => {
           <div className="text-[11px] sm:text-xs text-center text-slate-400">
             <div>💼Professional Cash Services💼</div>
             <div className="px-2">
-              © 2025 CSR CASH SERVICE. All Rights Reserved.{" "}
+              © 2025 CSR Cash Service. All Rights Reserved.{" "}
               Developed By{" "}
               <a
                 href="https://scrollloop.com"

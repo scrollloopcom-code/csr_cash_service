@@ -1,14 +1,13 @@
 import React from "react";
-import { CircleDollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const BrandIcon: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <CircleDollarSign
-      className={cn(
-        "text-cyan-400 [filter:drop-shadow(0_0_4px_theme(colors.cyan.400/0.7))]",
-        className
-      )}
+    <img
+      src={logo}
+      alt="CSR Cash Service Logo"
+      className={cn("object-contain", className)}
     />
   );
 };

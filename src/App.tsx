@@ -30,7 +30,7 @@ const App = () => {
     return <LoadingScreen />;
   }
 
-  const title = "CSR CASH SERVICE";
+  const title = "CSR Cash Service";
   const description = "1xBet | Melbet | 888Starz සඳහා ඉක්මන් මුදල් තැන්පතු සහ ලබාගැනීම්.";
   // Construct absolute URLs for crawlers
   const siteUrl = window.location.origin;
